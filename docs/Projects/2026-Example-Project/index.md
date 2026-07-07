@@ -2,16 +2,13 @@
 icon: lucide/clipboard-list
 ---
 
-# Project title
-
-<!--
-Copy this file into a new folder under docs/Projects/<project-slug>/index.md.
-Replace all TODO fields. Delete sections that are clearly not relevant, but do not delete safety, setup, data, or handover information without a reason.
--->
+# Example Project (2026)
 
 !!! note "How to use this template"
 
-    This template is for ROX-Diff research, student projects, integration work, and temporary technical tests. Write it so that a new maintainer can understand and reproduce the project without relying on the original author.
+    This template is for ROX-Diff research, student projects, integration work, and temporary tests/demos. Write it so that a new maintainer can understand and reproduce the project without relying on the original author.
+
+    Everything here on this page is an example and template that can be copied, repurposed and used however needed. One thing to note is that many projects have similar setup sequences and configs, so it might be worth exploring other existing projects and copying their workflow if it's similar, in order to save time on documenting :)
 
 ## Short summary
 
@@ -27,15 +24,12 @@ Replace all TODO fields. Delete sections that are clearly not relevant, but do n
 | Status | TODO: Planned / Active / Paused / Completed / Archived |
 | Start date | TODO: YYYY-MM-DD |
 | End date | TODO: YYYY-MM-DD or ongoing |
-| Main maintainer | TODO: Name and contact |
-| Backup contact | TODO: Name and contact |
-| Supervisor / project owner | TODO: Name and contact |
+| Original author(s) | TODO: Name(s) and contact(s) |
+| Current maintainer(s) | TODO: Name(s) and contact(s) |
 | Related course / thesis / work package | TODO |
 | Related repository | TODO: Link or internal path |
 | Data location | TODO: Link or internal path |
-| Robot affected | TODO: ROX-Diff ID / simulation only / external device only |
-| Safety impact | TODO: None / low / medium / high |
-| Last verified | TODO: YYYY-MM-DD, by whom |
+| Last verified / updated | TODO: YYYY-MM-DD, by whom |
 
 ## Quick start
 
@@ -59,11 +53,11 @@ Example: RViz opens, /scan publishes, robot appears in map, controller becomes a
 
 !!! warning "Before running on the real robot"
 
-    Confirm that the test area is clear, emergency stop is reachable, safety scanners are active, and the current project is approved for real-robot operation. If not sure, run in simulation first.
+    Confirm that the test area is clear, emergency stop is reachable, safety scanners are active, and make sure you understand the project and what it's suppose to do!
 
 ## System overview
 
-Explain the project architecture. Include the robot, external PCs, sensors, network, data flow, and software nodes.
+You can explain the project architecture here. Include the robot, external PCs, sensors, network, data flow, and software nodes.
 
 ``` mermaid
 flowchart LR
@@ -98,11 +92,10 @@ flowchart LR
 | Sensors | TODO: LiDAR, safety scanner, camera, IMU, external sensors |
 | Network equipment | TODO: router, switch, Wi-Fi, Ethernet, VLAN, etc. |
 | External hardware | TODO: payload, mount, arm, charger, IO board, test rig |
-| Safety devices | TODO: emergency stop, safety scanner zones, wireless E-stop |
 
 !!! danger "Sensitive details"
 
-    Do not include passwords, private keys, private Wi-Fi credentials, or unrestricted internal network details in public documentation.
+    Do not include sensitive passwords, private keys, private Wi-Fi credentials, or unrestricted internal network details in public documentation.
 
 ## Software used
 
@@ -263,20 +256,6 @@ Next action:
 
     Save the exact parameter files, launch files, map files, and commit hashes used for important experiments. Results are hard to reproduce without them.
 
-## Safety notes
-
-| Risk | Mitigation | Responsible person |
-|---|---|---|
-| Unexpected robot motion | TODO: Use simulation first, clear test area, keep E-stop reachable | TODO |
-| Collision with people or objects | TODO: Restricted area, low speed, safety scanner active | TODO |
-| Battery / charging issue | TODO: Follow local charging procedure | TODO |
-| Network or command delay | TODO: Local stop method, avoid unsafe remote operation | TODO |
-| Payload or mount failure | TODO: Mechanical check before motion | TODO |
-
-!!! danger "Stop condition"
-
-    Stop the test immediately if the robot behaves unexpectedly, localization is wrong, safety devices are disabled, a person enters the test area, or the operator loses reliable control.
-
 ## Known issues and limitations
 
 | Issue | Impact | Workaround | Status |
@@ -353,4 +332,3 @@ Before marking the project as completed or archived:
 | Date | Author | Change |
 |---|---|---|
 | YYYY-MM-DD | TODO | Created project page |
-

@@ -4,9 +4,11 @@ icon: lucide/list-checks
 
 # Instructions for documenting projects
 
-Use this page when creating a new project entry under `docs/Projects/`. The project can be a research activity, thesis/student project, integration test, temporary benchmark, hardware trial, or internal demo.
+Use this page as a guideline to creating a new project entry under `docs/Projects/`. Whether the project is a research activity, thesis/student project or just a test/demo, please follow a methodical system for documenting your project. You can use the provided [template](2026-Example-Project/index.md) as a foundation for your projects documentation. 
 
-Projects should be added into their own **named** folders in the *Projects/* folder, for example *Projects/VDA5050_Crane/*
+Projects should be added into their own **named** folders in the *Projects/* folder, for example *Projects/2026-VDA5050-Crane/* 
+
+If the project contains multiple markdown files, they can be easily re-ordered by adding a number in front of the name, for example *1-instructions.md* and *2-setup.md*. This way they appear in the wanted order in the documentation tree. 
 
 !!! success "Main rule"
 
@@ -26,7 +28,7 @@ Create a new folder when the work has any of the following:
 
 ## Naming convention
 
-Use a stable lowercase slug:
+Use a lowercase slug:
 
 ``` text
 YYYY-short-topic-name
@@ -45,16 +47,16 @@ Avoid names such as:
 
 ``` text
 new-test
-saad-project
+cool-project
 final-version
 robot-stuff
 ```
 
 !!! warning "Avoid personal-only names"
 
-    Names should describe the project topic, not only the person. People leave; project topics remain searchable.
+    Names should reflect the project's purpose, not its author. People leave; the project lives on.
 
-## Recommended project folder layout
+## Example project folder layout
 
 === "Small project"
 
@@ -68,7 +70,7 @@ robot-stuff
 
 === "Normal project"
 
-    Use this for research, student, and integration projects.
+    As the small project grows, try to divide different sections into their own files/pages. Example for research, student, and integration projects.
 
     ``` text
     docs/Projects/2026-example-project/
@@ -85,40 +87,36 @@ robot-stuff
 
 === "Large project"
 
-    Use this when the project has several work packages or multiple maintainers.
+    If the project becomes very large, it's a good idea to include a page describing the architecture and structure of the whole project. Use this when the project has several work packages or multiple maintainers.
 
     ``` text
     docs/Projects/2026-example-large-project/
     ├── index.md
+    ├── architecture.md
     ├── setup.md
     ├── operation.md
-    ├── architecture.md
     ├── experiments/
     │   ├── index.md
     │   ├── experiment-001.md
     │   └── experiment-002.md
     ├── troubleshooting.md
-    ├── handover.md
     └── assets/
+        ├── diagrams/
+        ├── photos/
+        └── configuration-snapshots/
     ```
 
 ## How to create a new project page
 
-1. Create a new folder under `docs/Projects/`.
-2. Copy [the project template](template.md) into the new folder as `index.md`.
-3. Replace every `TODO` placeholder.
-4. Add setup commands that have been tested from a clean workstation.
-5. Add links to repositories, data folders, configuration files, and maps.
-6. Add screenshots, diagrams, or photos under the project `assets/` folder.
-7. Add the project to `zensical.toml` navigation if explicit navigation is used.
-8. Run a local documentation preview and check that links work.
+1. Duplicate the [template folder](2026-Example-Project/index.md) into `docs/Projects/` and name it [appropriately](#naming-convention).
+2. Replace every `TODO` placeholder.
+3. Add setup commands that have been tested from a clean workstation.
+4. Add links to repositories, data folders, configuration files, and maps.
+5. Add screenshots, diagrams, or photos under the project `assets/` folder.
+6. Run a local documentation preview and check that links work.
 
 ``` bash title="Preview documentation"
 zensical serve
-```
-
-``` bash title="Build documentation"
-zensical build
 ```
 
 ## What good documentation should answer
@@ -127,12 +125,12 @@ A future maintainer should be able to answer these questions from the project pa
 
 - What was the project trying to achieve?
 - Who worked on it and when?
-- What exact robot, PC, ROS 2 distribution, branch, map, and configuration were used?
+- What exact PC, ROS 2 distribution, branch, map, and configuration were used?
 - What commands start the system?
 - What should the user see when the setup is working?
 - Where are the logs, datasets, videos, maps, and results?
 - What failed, what was not completed, and what should be done next?
-- What must not be changed without checking with the robot maintainer?
+- What must not be changed without checking with the maintainer?
 
 ## Required metadata block
 
@@ -144,26 +142,10 @@ Every project `index.md` should include this table near the top:
 | Status | TODO: Planned / Active / Paused / Completed / Archived |
 | Start date | TODO: YYYY-MM-DD |
 | End date | TODO: YYYY-MM-DD or ongoing |
-| Main maintainer | TODO: Name and contact |
-| Backup contact | TODO: Name and contact |
+| Maintainer(s) | TODO: Name(s) and contact(s) |
 | Related repository | TODO: Link or internal path |
 | Data location | TODO: Link or internal path |
-| Robot affected | TODO: ROX-Diff ID / none / simulation only |
-| Safety impact | TODO: None / low / medium / high |
-
-## Documentation quality checklist
-
-Before archiving the project, check:
-
-- [ ] All TODOs are removed or intentionally marked as unknown.
-- [ ] Commands have been tested by someone other than the main maintainer.
-- [ ] Required credentials are not written in public documentation.
-- [ ] Old branches, temporary folders, and obsolete maps are marked clearly.
-- [ ] Data and logs are linked, not silently stored on a personal laptop.
-- [ ] Known failures and limitations are documented honestly.
-- [ ] The project status is updated to completed, paused, or archived.
-- [ ] The handover section explains what the next person should do.
 
 !!! danger "Do not document secrets"
 
-    Do not place passwords, private keys, VPN details, private Wi-Fi credentials, internal IPs, or access tokens in public documentation. Use protected internal storage and link to it only when appropriate.
+    Do not place sensitive passwords, private keys, VPN details, private Wi-Fi credentials, or access tokens in public documentation. Use protected internal storage and link to it only when appropriate.

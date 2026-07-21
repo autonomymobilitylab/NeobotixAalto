@@ -34,6 +34,9 @@ This documentation is intended as a practical starting point for students, resea
 
 </div>
 
+## Documentation Github repository
+The repository is currently available at [https://github.com/autonomymobilitylab/NeobotixAalto](https://github.com/autonomymobilitylab/NeobotixAalto) 
+
 !!! note "General ROX documents"
     [ROX Data Sheet](https://www.neobotix-robots.com/fileadmin/images/downloads/Datenbl%C3%A4tter/Data-Sheet_ROX.pdf)
     

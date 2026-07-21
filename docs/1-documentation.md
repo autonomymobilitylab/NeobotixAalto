@@ -11,7 +11,11 @@ This page explains how to maintain the ROX-Diff documentation using the Zensical
 To edit the documentation, clone the repository and setup the virtual environment (venv)
 
 ``` bash title="Environment setup"
-git clone https://github.com/Huxyshuu/NeobotixAalto
+# Clone with HTTPS
+git clone https://github.com/autonomymobilitylab/NeobotixAalto.git
+# Clone with SSH
+git clone git@github.com:autonomymobilitylab/NeobotixAalto.git
+
 python3 -m venv venv
 source venv/bin/activate
 pip install zensical
